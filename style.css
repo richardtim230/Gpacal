@@ -124,6 +124,8 @@ main {
 
   max-width: 100%;
 
+  overflow-x: auto; /* Enables horizontal scrolling */
+
   word-wrap: break-word;
 
 }
@@ -185,6 +187,30 @@ td button {
   font-size: 0.8em;
 
 }
+
+
+/* Add Horizontal Scroll Behavior */
+
+.calculator table, .history table {
+
+  display: block; /* Allows scrolling on smaller screens */
+
+  overflow-x: auto; /* Horizontal scrolling */
+
+  max-width: 100%;
+
+}
+
+table thead {
+
+  position: sticky;
+
+  top: 0;
+
+  background-color: #43cea2;
+
+}
+
 
 footer {
 
