@@ -125,7 +125,7 @@ td button {
 /* Input Fields in Calculator Section */
 .calculator input[type="number"],
 .calculator select {
-  width: 70%; /* Reduce the width to 70% of the container */
+  width: 90%; /* Reduce the width to 70% of the container */
   max-width: 300px; /* Limit maximum width for larger screens */
   padding: 8px;
   font-size: 1em;
