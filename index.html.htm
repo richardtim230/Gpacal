@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPA & CGPA Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="welcomePage" class="welcome">
+    <h1>Welcome to GPA & CGPA Calculator</h1>
+    <p>Please enter your name to continue:</p>
+    <input type="text" id="userName" placeholder="Your Name" />
+    <button id="startApp">Start</button>
+  </div>
+
+  <div id="mainApp" class="hidden">
+    <header class="header">
+      <h1>Hi, <span id="displayName"></span>!</h1>
+      <p>Track your academic performance effortlessly.</p>
+    </header>
+
+    <main>
+      <!-- GPA Section -->
+      <section class="calculator">
+        <h2>Calculate GPA</h2>
+        <form id="gpaForm">
+          <table id="gpaTable">
+            <thead>
+              <tr>
+                <th>Course Unit</th>
+                <th>Grade</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="number" class="courseUnit" placeholder="Unit" required /></td>
+                <td>
+                  <select class="grade" required>
+                    <option value="">Select Grade</option>
+                    <option value="5">A (70-100)</option>
+                    <option value="4">B (60-69)</option>
+                    <option value="3">C (50-59)</option>
+                    <option value="2">D (45-49)</option>
+                    <option value="1">E (40-44)</option>
+                    <option value="0">F (0-39)</option>
+                  </select>
+                </td>
+                <td><button type="button" class="removeRow">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="addRow">Add Course</button>
+          <button type="submit">Calculate GPA</button>
+        </form>
+        <p id="gpaResult"></p>
+      </section>
+
+      <!-- CGPA Section -->
+      <section class="calculator">
+        <h2>Calculate CGPA</h2>
+        <form id="cgpaForm">
+          <h3>First Semester</h3>
+          <table id="semester1Table">
+            <thead>
+              <tr>
+                <th>Course Unit</th>
+                <th>Grade</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="number" class="courseUnit" placeholder="Unit" required /></td>
+                <td>
+                  <select class="grade" required>
+                    <option value="">Select Grade</option>
+                    <option value="5">A (70-100)</option>
+                    <option value="4">B (60-69)</option>
+                    <option value="3">C (50-59)</option>
+                    <option value="2">D (45-49)</option>
+                    <option value="1">E (40-44)</option>
+                    <option value="0">F (0-39)</option>
+                  </select>
+                </td>
+                <td><button type="button" class="removeRow">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="addRowSemester1">Add Course</button>
+
+          <h3>Second Semester</h3>
+          <table id="semester2Table">
+            <thead>
+              <tr>
+                <th>Course Unit</th>
+                <th>Grade</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="number" class="courseUnit" placeholder="Unit" required /></td>
+                <td>
+                  <select class="grade" required>
+                    <option value="">Select Grade</option>
+                    <option value="5">A (70-100)</option>
+                    <option value="4">B (60-69)</option>
+                    <option value="3">C (50-59)</option>
+                    <option value="2">D (45-49)</option>
+                    <option value="1">E (40-44)</option>
+                    <option value="0">F (0-39)</option>
+                  </select>
+                </td>
+                <td><button type="button" class="removeRow">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" id="addRowSemester2">Add Course</button>
+
+          <button type="submit">Calculate CGPA</button>
+        </form>
+        <p id="cgpaResult"></p>
+      </section>
+
+      <!-- History Section -->
+      <section class="history">
+        <h2>Calculation History</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Value</th>
+              <th>Remark</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="historyTable"></tbody>
+        </table>
+        <button id="clearHistory">Clear History</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2024 GPA & CGPA Calculator. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
