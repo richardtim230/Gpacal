@@ -1,4 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const messages = [
+    "Welcome to GPA & CGPA Calculator!",
+    "Track your academic performance with ease.",
+    "Stay on top of your goals this semester!",
+  ];
+
+  const messageContainer = document.querySelector(".messages");
+
+  // Populate the messages dynamically
+  messageContainer.innerHTML = messages.map((msg) => `<p>${msg}</p>`).join("");
+
+  // Optionally, repeat messages for seamless scrolling
+  const clone = messageContainer.cloneNode(true);
+  messageContainer.parentElement.appendChild(clone);
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
   const welcomePage = document.getElementById("welcomePage");
   const mainApp = document.getElementById("mainApp");
   const userNameInput = document.getElementById("userName");
