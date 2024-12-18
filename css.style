@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #6a11cb, #2575fc);
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+.welcome {
+  text-align: center;
+  padding: 50px;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  margin: 5px 0;
+  border: none;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  background: #ff7e5f;
+  color: white;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #fc575e;
+}
+
+.header {
+  text-align: center;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  word-wrap: break-word;
+}
+
+header h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+header p {
+  margin: 0;
+  font-size: 1em;
+}
+
+main {
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.calculator, .history {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.calculator h2, .history h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  word-wrap: break-word;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 0.9em;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+th {
+  background: #43cea2;
+  color: white;
+}
+
+td {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+td button {
+  padding: 5px 10px;
+  font-size: 0.8em;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: white;
+  font-size: 0.9em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 10px 0;
+  word-wrap: break-word;
+}
+
+input, select, button {
+  width: calc(100% - 20px);
+}
+
+button {
+  width: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .calculator, .history {
+    padding: 10px;
+  }
+
+  th, td {
+    font-size: 0.8em;
+    padding: 8px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header p {
+    font-size: 0.9em;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
