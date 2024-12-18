@@ -1,21 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const notificationWidget = document.getElementById("notificationWidget");
 
-  // Function to show the widget only on the main page
-  const showWidgetOnMainPage = () => {
-    const isMainPage = !document.getElementById("welcomePage").classList.contains("hidden") 
-      && !document.getElementById("mainApp").classList.contains("hidden");
-
-    notificationWidget.style.display = isMainPage ? "block" : "none";
-  };
-
-  // Initial call to display or hide the widget
-  showWidgetOnMainPage();
-
-  // Optional: Adjust visibility if pages toggle dynamically
-  document.addEventListener("visibilitychange", showWidgetOnMainPage);
+  // Display message dynamically
+  const message = "Welcome to GPA & CGPA Calculator! Track your academic performance effortlessly.";
+  notificationWidget.querySelector("p").textContent = message;
 });
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
