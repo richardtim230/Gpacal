@@ -1,19 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const messages = [
-    "Welcome to GPA & CGPA Calculator!",
-    "Track your academic performance with ease.",
-    "Stay on top of your goals this semester!",
-  ];
+  const notificationWidget = document.getElementById("notificationWidget");
 
-  const messageContainer = document.querySelector(".messages");
+  // Function to show the widget only on the main page
+  const showWidgetOnMainPage = () => {
+    const isMainPage = !document.getElementById("welcomePage").classList.contains("hidden") 
+      && !document.getElementById("mainApp").classList.contains("hidden");
 
-  // Populate the messages dynamically
-  messageContainer.innerHTML = messages.map((msg) => `<p>${msg}</p>`).join("");
+    notificationWidget.style.display = isMainPage ? "block" : "none";
+  };
 
-  // Optionally, repeat messages for seamless scrolling
-  const clone = messageContainer.cloneNode(true);
-  messageContainer.parentElement.appendChild(clone);
+  // Initial call to display or hide the widget
+  showWidgetOnMainPage();
+
+  // Optional: Adjust visibility if pages toggle dynamically
+  document.addEventListener("visibilitychange", showWidgetOnMainPage);
 });
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
