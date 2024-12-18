@@ -153,49 +153,29 @@ td button {
 /* Notification Widget */
 .notification-widget {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
-  width: 300px;
-  height: 50px;
+  top: 0; /* Display at the top of the screen */
+  left: 100%; /* Start outside the right edge of the screen */
+  width: 100%;
   background: linear-gradient(135deg, #43cea2, #185a9d);
   color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-}
-
-.message-container {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-.messages {
-  display: flex;
-  flex-direction: column;
-  animation: rollMessages 10s linear infinite;
-}
-
-.messages p {
-  margin: 0;
-  padding: 10px 20px;
-  font-size: 1em;
+  font-weight: bold;
+  font-size: 1.2em;
   text-align: center;
+  padding: 10px 0;
+  overflow: hidden;
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  white-space: nowrap; /* Prevent text wrapping */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  animation: rollMessage 10s linear infinite; /* Smooth scrolling animation */
 }
 
-/* Animation for Rolling Messages */
-@keyframes rollMessages {
-  0% { transform: translateY(0); }
-  33% { transform: translateY(-50px); } /* Adjust the height to match the widget */
-  66% { transform: translateY(-100px); }
-  100% { transform: translateY(0); }
+/* Scrolling Animation */
+@keyframes rollMessage {
+  0% { transform: translateX(100%); } /* Start outside the right edge */
+  100% { transform: translateX(-100%); } /* Scroll to outside the left edge */
 }
+
+
 
 
 /* Footer */
