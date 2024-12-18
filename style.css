@@ -15,10 +15,10 @@ body {
 .welcome {
   text-align: center;
   padding: 50px;
-  font-size: 3em;
+  font-size: 1em;
 }
 
-select {
+select, input {
   padding: 10px;
   font-size: 1em;
   border-radius: 5px;
